@@ -12,13 +12,13 @@ import com.klef.soa.exam.entity.NGOEntity;
 import com.klef.soa.exam.service.NGOService;
 
 @RestController
-@RequestMapping("/ngo")
+@RequestMapping({"/", "/ngo"})
 public class NGOController
 {
     @Autowired
     private NGOService service;
 
-    @GetMapping("/")
+    @GetMapping({"/", ""})
     public String home()
     {
         return "SOA Programming & MicroServices NGO Entity";
